@@ -17,6 +17,7 @@ code {
 }
 
 .technology-icons {
-    min-width: 5rem;
-    min-height: 5rem;
+    color: #FFFFFF;
+    min-width: 3rem;
+    min-height: 3rem;
 }
