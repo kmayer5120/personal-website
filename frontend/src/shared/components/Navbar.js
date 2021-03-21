@@ -1,7 +1,7 @@
 import React from "react";
 import {FaBars, FaGithub, FaLinkedin} from "react-icons/fa"
 
-export default function Navbar({ fixed }) {
+export const Navbar = ({ fixed }) => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
