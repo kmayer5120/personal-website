@@ -7,7 +7,7 @@ import profilePicture from "../../img/kyle-mayer-profile-picture.jpg";
 export const AboutMe = () => {
     return (
         <>
-            <div className="container bg-indigo-900 border rounded-xl shadow-md mt-10 md:mx-5 md:max-w-md">
+            <div className="container bg-indigo-900 border-2 border-white border-opacity-50 rounded-xl shadow-md mt-10 md:mx-5 md:max-w-md">
                 <Header label="Bio" />
                 <div className="md:grid grid-cols-1 align-items justify-items-center">
                     <img
@@ -16,6 +16,10 @@ export const AboutMe = () => {
                         className="my-5 rounded-lg max-w-xs mx-auto"
                     />
                     <div className="px-20 flex-row">
+                        <p className="max-w-prose text-indigo-100 my-5">
+                            Hello and welcome to my personal website! My name is
+                            Kyle Mayer.
+                        </p>
                         <p className="max-w-prose text-indigo-100 my-5">
                             Passionate and creative problem solver working to
                             expand my skill set as much as possible every single
