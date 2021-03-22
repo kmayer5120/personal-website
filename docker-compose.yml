@@ -17,8 +17,8 @@ services:
     #     - ./backend/tsconfig.json:/home/node/app/tsconfig.json
     app:
         build: frontend
-        depends_on:
-            - node
+#        depends_on:
+#            - node
 # #    For deploying to server use ports: - 80:80
 #     ports:
 #       - 80:80
