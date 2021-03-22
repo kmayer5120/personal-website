@@ -21,12 +21,12 @@ export const Technologies = () => {
                 <Header label="Technologies" />
                 <div className="ml-2 border-l-8 rounded border-indigo-500">
                     <div className="grid my-5 px-20 grid-flow-cols grid-flow-rows grid-cols-3 grid-rows-3 gap-12">
-                        <FaReact className="technology-icons" />
                         <SiJavascript className="technology-icons" />
+                        <FaReact className="technology-icons" />
                         <SiTypescript className="technology-icons" />
                         <IoLogoHtml5 className="technology-icons" />
-                        <IoLogoCss3 className="technology-icons" />
                         <FaBootstrap className="technology-icons" />
+                        <IoLogoCss3 className="technology-icons" />
                         <SiMysql className="technology-icons" />
                         <FaNode className="technology-icons" />
                         <IoLogoDocker className="technology-icons" />

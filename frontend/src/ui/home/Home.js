@@ -13,7 +13,7 @@ export const Home = () => {
                         className="md:visible invisible bg-center bg-cover min-h-full w-full absolute"
                     />
                     <div className="flex flex-col relative">
-                        <div className="container mx-auto md:flex">
+                        <div className="container mx-auto md:flex align-items justify-content-center">
                             <AboutMe className="flex-grow" />
                             <Technologies className="flex-grow" />
                         </div>
