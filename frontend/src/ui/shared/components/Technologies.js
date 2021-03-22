@@ -42,6 +42,8 @@ export const Technologies = () => {
                                 src={ddcLogo}
                                 alt="Deep Dive Coding Logo"
                                 className="hover:opacity-75 transition ease-in-out duration-300"
+                                target="_blank"
+                                rel="noreferrer"
                             />
                         </a>
                     </div>

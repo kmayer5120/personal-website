@@ -32,14 +32,18 @@ export const AboutMe = () => {
                             <a
                                 href="https://www.linkedin.com/in/kyle-mayer-fullstack/"
                                 className="text-white hover:text-indigo-300 transition duration-300 ease-in-out text-8xl flex-none"
+                                target="_blank"
+                                rel="noreferrer"
                             >
-                                <FaGithub />
+                                <FaLinkedin />
                             </a>
                             <a
                                 href="https://github.com/kmayer5120"
                                 className="text-white hover:text-indigo-300 transition duration-300 ease-in-out text-8xl flex-none"
+                                target="_blank"
+                                rel="noreferrer"
                             >
-                                <FaLinkedin />
+                                <FaGithub />
                             </a>
                         </div>
                     </div>
