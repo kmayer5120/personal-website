@@ -1,5 +1,5 @@
 {
-  "name": "ddcpassport",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -37,8 +37,8 @@
     "jsonwebtoken": "^8.5.1",
     "mailgun-js": "^0.22.0",
     "memorystore": "^1.6.1",
-    "nodemailer": "^6.4.15",
     "morgan": "^1.10.0",
+    "nodemailer": "^6.4.15",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "ts-node": "^9.0.0",
@@ -59,7 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "mysql2": "^2.2.5",
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.7",
     "standardx": "^5.0.0",
     "typescript": "^4.0.5"
   }
