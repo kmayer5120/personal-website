@@ -68,7 +68,7 @@ export default function Post() {
                     src={urlFor(postData.mainImage).width(500).url()}
                     className="rounded-l mt-5 py-2 md:max-h-96 md:max-h-96 object-cover"
                     alt="blog post" />
-                <div className="max-w-prose p-5 mb-4 rounded-md shadow-lg">
+                <div className="max-w-prose prose p-5 mb-4 rounded-md shadow-lg">
                     <BlockContent
                         blocks={postData.body}
                         projectId={sanityClient.projectId}
