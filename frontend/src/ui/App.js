@@ -9,7 +9,7 @@ import Post from "./shared/components/sanity/Post";
 function App() {
     return (
         <>
-            <Navbar />
+            <Navbar className="fixed" />
             <BrowserRouter>
                 <Switch>
                     <Route path="/blog" component={Blog} />
