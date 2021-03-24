@@ -43,6 +43,7 @@ export default function Post() {
         <div className="bg-gray-800 h-screen text-white md:px-20 sm:px-5">
             <div className="flex flex-col align-items justify-center gap-10">
                 <h2 className="block text-3xl mt-5">{postData.title}</h2>
+                <hr/>
                 <div className="container flex align-baseline justify-center">
                     <img
                         src={urlFor(postData.authorImage).width(100).url()}

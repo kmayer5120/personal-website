@@ -24,17 +24,17 @@ export default function AllPosts() {
   }, []);
 
   return (
-      <div>
-        <h2>Blog Posts</h2>
-        <h3>Welcome to my blog posts page!</h3>
-        <div className="grid grid-cols-3 grid-auto-rows">
+      <div className="h-screen">
+        <h2 className="text-3xl py-5">Blog Posts</h2>
+        <h3 className="text-xl text-indigo-200">Welcome to my blog posts page!</h3>
+        <div className="md:grid grid-cols-3 grid-auto-rows gap-5">
           {allPostsData &&
           allPostsData.map((post, index) => (
               <Link to={"/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
-                <img src={post.mainImage.asset.url} className={"min-w-sm"} alt="blog post" />
+                <img src={post.mainImage.asset.url} className={"min-w-sm pt-10 rounded-l"} alt="blog post" />
                 <span>
-                  <h2>{post.title}</h2>
+                  <h2 className="py-3">{post.title}</h2>
                 </span>
               </span>
               </Link>
