@@ -51,7 +51,7 @@ export const Technologies = () => {
                         <p className="text-white max-w-prose my-5">
                             This fullstack bootcamp consisted of 400 hours of in
                             class time. We wrote code daily and participated in
-                            a capstone team project build with MySQL, Express,
+                            a capstone team project built with MySQL, Express,
                             React, and Node.
                         </p>
                     </div>
