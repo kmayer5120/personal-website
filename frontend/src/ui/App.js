@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Switch, Route } from "react-router";
 import { Blog } from "./blog/Blog";
 import Post from "./shared/components/sanity/Post";
+import { Resume } from "./resume/Resume";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Navbar className="fixed" />
             <BrowserRouter>
                 <Switch>
+                    <Route path="/resume" component={Resume}/>
                     <Route path="/blog" component={Blog} />
                     <Route path="/:slug" component={Post} />
                     <Route exact path="/" component={Home} />
