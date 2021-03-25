@@ -23,7 +23,6 @@ code {
 }
 
 .glass-blur {
-    border: right;
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px 0 rgba(133, 137, 194, 0.3);
     backdrop-filter: blur(5px);
@@ -42,3 +41,14 @@ code {
   margin-right: auto;
   border-radius: 5px;
 }
+
+@layer components {
+    .btn {
+        @apply shadow-xl py-2 px-3 rounded
+    }
+
+    .btn-indigo {
+        @apply bg-indigo-500 text-white hover:bg-indigo-400 transition
+    }
+}
+
