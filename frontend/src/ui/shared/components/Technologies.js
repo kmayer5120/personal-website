@@ -32,7 +32,7 @@ export const Technologies = () => {
                         <IoLogoDocker className="technology-icons" />
                     </div>
                     <div className="mx-20">
-                        <p className="text-white max-w-prose my-5">
+                        <p className="max-w-prose text-lg text-indigo-100  my-5">
                             I learned these technologies (and many more!) when I
                             took the Fullstack Deep Dive Coding Bootcamp. I am
                             proud to be an alumni of this bootcamp.
@@ -48,7 +48,7 @@ export const Technologies = () => {
                                 />
                             </a>
                         </div>
-                        <p className="text-white max-w-prose my-5">
+                        <p className="max-w-prose text-lg text-indigo-100  my-5">
                             This fullstack bootcamp consisted of 400 hours of in
                             class time. We wrote code daily and participated in
                             a capstone team project built with MySQL, Express,

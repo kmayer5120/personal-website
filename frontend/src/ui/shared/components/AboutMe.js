@@ -19,14 +19,14 @@ export const AboutMe = () => {
                             className="my-5 rounded-xl max-w-xs mx-auto shadow-md"
                         />
                         <div className="px-20 flex-row">
-                            <p className="max-w-prose text-white mt-5 font-semibold">
+                            <p className="max-w-prose text-white md:text-xl text-lg mt-5 font-bold">
                                 Hello and welcome to my personal website! My
                                 name is Kyle Mayer.
                             </p>
                             <p className="text-indigo-200 text-center text-6xl font-bold">
                                ...
                             </p>
-                            <p className="max-w-prose text-white my-5">
+                            <p className="max-w-prose text-indigo-100 text-lg my-5">
                                 Passionate and creative problem solver working
                                 to expand my skill set as much as possible every
                                 single day. My previous career as a professional
