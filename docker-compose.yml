@@ -60,6 +60,9 @@ services:
 #    For deploying to server use ports: - 80:80
     ports:
       - 80:80
+#    volumes:
+#      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+#      - ./public:/usr/share/nginx/html
    sql:
      build: ./sql
    # Make sure to update this to match your project.
