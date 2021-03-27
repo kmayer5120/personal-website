@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import sanityClient from "@sanity/client";
+import sanityClient from "../client";
 
 
 export const slice = createSlice({
@@ -12,23 +12,22 @@ export const slice = createSlice({
     },
 });
 
-export const fetchAllPosts = () => async dispatch => {
-    try {
-        const { data } = await sanityClient.fetch(
-            `*[_type == "post"]{
-        title,
-        slug,
-        mainImage{
-          asset->{
-          _id,
-          url
-        }
-      }
-    }`);
-        dispatch(getAllPosts(data));
-    } catch(error) {
-        console.error(error)
-    }
+export const fetchAllPosts = () => dispatch => {
+    //fetch data from Sanity IO using GROQ query
+    sanityClient.fetch(
+        `*[_type == "post"]{
+            title,
+            _createdAt,
+            slug,
+            mainImage{
+              asset->{
+              _id,
+              url
+            },
+          }
+        }`)
+        .then(data => dispatch(getAllPosts(data)))
+        .catch(error => console.error(error));
 };
 
 export const { getAllPosts } = slice.actions;
