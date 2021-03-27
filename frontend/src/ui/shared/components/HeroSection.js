@@ -15,8 +15,9 @@ export const HeroSection = () => {
                         <span className="text-yellow-500">Always </span>
                         <span className="text-white pr-4">growing.</span>
                     </div>
-                    <div className="flex">
-                        <a href="#about" className="btn btn-indigo shadow-lg">Learn more about Kyle</a>
+                    <div className="flex gap-2">
+                        <a href="#about" className="btn btn-primary shadow-lg">About Kyle</a>
+                        <a href="https://www.dropbox.com/s/tphpwff3vc7ggtg/kyle-mayer-resume-2021.pdf?dl=0" target="_blank" rel="noreferrer" className="btn btn-secondary">Get Resume</a>
                     </div>
                 </div>
             </section>
