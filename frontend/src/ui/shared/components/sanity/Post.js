@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../../../../client";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
-import { dateFormatter } from "../../../utils/dateFormatter";
+import { PostDate } from "./PostDate";
 
 const builder = imageUrlBuilder(sanityClient);
 
@@ -41,7 +41,6 @@ export default function Post() {
 
     if (!postData) return <div>Loading...</div>;
 
-    const { month, day, year, hour, minute } = dateFormatter(postData._createdAt);
 
     return (
         <div className="bg-gray-800 min-h-screen pb-10 text-white md:px-20 sm:px-5">
@@ -49,14 +48,12 @@ export default function Post() {
                 <div className="container flex flex-row items-center justify-center">
                     <img
                         src={urlFor(postData.authorImage).width(50).url()}
-                        className="block rounded-full my-5 border-2 rounded border-indigo-600"
+                        className="block rounded-full my-5 mr-5 border-2 rounded border-indigo-600"
                         alt="Author: Kyle"
                     />
-                    <div className="flex flex-col items-center">
-                    <h4 className="text-xl my-2 ml-10">Author: {postData.name}</h4>
-                    <h3 className="text-l text-indigo-200 ml-8">
-                        {`${month}-${day}-${year} ${hour}:${minute}`}
-                    </h3>
+                    <div className="flex flex-col justify-items-center">
+                        <h4 className="text-xl my-2 ml-10">Author: {postData.name}</h4>
+                        <PostDate date={postData._createdAt} />
                     </div>
                     {/*<h5 className="text-l ">Fullstack Developer</h5>*/}
                 </div>

@@ -5,19 +5,22 @@ import { BrowserRouter } from "react-router-dom";
 import { Switch, Route } from "react-router";
 import { Blog } from "./blog/Blog";
 import Post from "./shared/components/sanity/Post";
+import { Provider } from "react-redux";
 
-function App() {
+function App(store) {
     return (
         <>
-            <Navbar className="fixed" />
-            <BrowserRouter>
-                <Switch>
-                    <Route path="/blog" component={Blog} />
-                    <Route path="/:slug" component={Post} />
-                    <Route exact path="/" component={Home} />
-                    <Route component={FourOhFour} />
-                </Switch>
-            </BrowserRouter>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Navbar className="fixed" />
+                    <Switch>
+                        <Route path="/blog" component={Blog} />
+                        <Route path="/:slug" component={Post} />
+                        <Route exact path="/" component={Home} />
+                        <Route component={FourOhFour} />
+                    </Switch>
+                </BrowserRouter>
+            </Provider>
         </>
     );
 }
