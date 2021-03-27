@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../../../../client";
+import { FilterBar } from "../FilterPosts/FilterBar";
 
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
@@ -26,7 +27,7 @@ export default function AllPosts() {
   return (
       <div className="min-h-screen flex flex-col items-center">
         <h2 className="text-3xl py-5">Blog Posts</h2>
-        <h3 className="text-xl text-indigo-200">Welcome to my blog posts page!</h3>
+          <FilterBar/>
         <div className="md:grid md:grid-cols-3 xs:grid xs:grid-cols-2 grid-auto-rows gap-3">
           {allPostsData &&
           allPostsData.map((post, index) => (
