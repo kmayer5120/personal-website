@@ -1,13 +1,13 @@
 import React from "react";
 import { FaGithub, FaLinkedin, GiPapers } from "react-icons/all";
+import styles from "../../../index.css"
 
-export const Navbar = ({ fixed }) => {
-    const linkClasses = "px-2 py-2 flex items-center text-3xl uppercase font-bold leading-snug text-white hover:opacity-75";
+export const Navbar = () => {
     return (
         <>
             <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-900 mb-0">
                 <div className="container px-4 flex items-center justify-between">
-                    <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                    <div className="w-full">
                         <a
                             className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
                             href="/"
@@ -16,19 +16,19 @@ export const Navbar = ({ fixed }) => {
                         </a>
                     </div>
                     <div>
-                        <ul className="grid grid-flow-col list-none">
+                        <ul className="grid grid-flow-col gap-1 list-none">
                             <li>
                                 <a
-                                    className={linkClasses}
                                     href="https://github.com/kmayer5120"
+                                    className={"nav-links"}
                                 >
                                     <FaGithub />
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    className={linkClasses}
                                     href="https://linkedin.com/in/kyle-mayer-fullstack"
+                                    className={"nav-links"}
                                 >
                                     <FaLinkedin />
                                 </a>
@@ -36,7 +36,7 @@ export const Navbar = ({ fixed }) => {
                             <li>
                                 <a
                                     href="/blog"
-                                    className={linkClasses}
+                                    className={"nav-links"}
                                 >
                                     <GiPapers />
                                 </a>
