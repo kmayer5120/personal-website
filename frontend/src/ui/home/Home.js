@@ -2,6 +2,8 @@ import React from "react";
 import { Technologies } from "../shared/components/Technologies";
 import { AboutMe } from "../shared/components/AboutMe";
 import { HeroSection } from "../shared/components/HeroSection";
+import { Link } from "react-router-dom";
+import { GiPapers } from "react-icons/all";
 
 export const Home = () => {
     return (
@@ -16,6 +18,11 @@ export const Home = () => {
                                 <Technologies className="flex-grow" />
                             </div>
                         </div>
+                    </div>
+                    <div className="flex align-items justify-center py-10">
+                        <Link to="/blog" className="btn btn-primary text-3xl">
+                            Go To Blog
+                        </Link>
                     </div>
                 </section>
             </div>
