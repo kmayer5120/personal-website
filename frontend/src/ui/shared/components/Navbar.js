@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, GiPapers } from "react-icons/all";
-import "../../../index.css"
+import "../../../index.css";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
     return (
@@ -34,12 +35,9 @@ export const Navbar = () => {
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="/blog"
-                                    className={"nav-links"}
-                                >
+                                <Link to="/blog" className="nav-links">
                                     <GiPapers />
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
