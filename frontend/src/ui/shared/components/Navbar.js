@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
     return (
         <>
-            <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-900 mb-0">
-                <div className="container px-4 flex items-center justify-between">
+            <nav className="relative flex flex-wrap items-between justify-between px-2 py-3 bg-gray-900 mb-0">
+                <div className="container px-1 flex items-center justify-between">
                     <div className="w-full">
                         <Link
                             className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"

@@ -12,7 +12,7 @@ export const Home = () => {
                 <section id='about' className='bg-gray-800 pb-10 h-full min-h-screen mb-auto'>
                     <div className='flex align-items justify-center'>
                         <div className='flex flex-col'>
-                            <div className='container mx-auto md:flex align-items justify-content-center'>
+                            <div className='container mx-auto lg:flex align-items justify-content-center'>
                                 <AboutMe className='flex-grow' />
                                 <Technologies className='flex-grow' />
                             </div>

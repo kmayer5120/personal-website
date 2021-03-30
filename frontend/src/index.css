@@ -90,7 +90,7 @@ code {
     }
 
     .nav-links {
-        @apply px-2 py-2 flex items-center text-3xl uppercase font-bold leading-snug text-white hover:opacity-75
+        @apply pl-2 py-2 flex items-center text-3xl uppercase font-bold leading-snug text-white hover:opacity-75
     }
 }
 
