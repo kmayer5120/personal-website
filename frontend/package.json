@@ -17,11 +17,13 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
     "framer-motion": "^4.0.3",
     "groq": "^2.2.6",
     "immer": "^8.0.1",
     "pdfjs": "^2.4.2",
+    "postcss": "^7.0.35",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
@@ -30,6 +32,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -58,10 +61,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.4",
-    "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.35",
     "prettier": "2.2.1",
-    "stylelint-config-recommended": "^4.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
+    "stylelint-config-recommended": "^4.0.0"
   }
 }
