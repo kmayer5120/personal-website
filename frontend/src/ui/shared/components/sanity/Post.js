@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import sanityClient from "../../../../client";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
@@ -29,6 +29,7 @@ export default function Post() {
              }
            },
          body,
+         category,
         "name": author->name,
         "bio": author->bio,
         "authorImage": author->image,
@@ -39,7 +40,9 @@ export default function Post() {
             .catch(console.error);
     }, [slug]);
 
-    if (!postData) return <div>Loading...</div>;
+    if (!postData) return <div className="text-white">Loading...</div>;
+
+    console.log(postData);
 
 
     return (
@@ -55,7 +58,6 @@ export default function Post() {
                         <h4 className="text-xl my-2 ml-10">Author: {postData.name}</h4>
                         <PostDate date={postData._createdAt} />
                     </div>
-                    {/*<h5 className="text-l ">Fullstack Developer</h5>*/}
                 </div>
             </div>
             <div
@@ -72,6 +74,7 @@ export default function Post() {
                         dataset={sanityClient.dataset}
                     />
                 </div>
+                <Link to="/blog" className="btn btn-secondary my-5">Back to Blog Posts</Link>
             </div>
         </div>
     );
