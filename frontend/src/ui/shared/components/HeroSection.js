@@ -34,8 +34,6 @@ export const HeroSection = () => {
                     </div>
                 </div>
             </section>
-
         </>
-    )
-        ;
+    );
 };
