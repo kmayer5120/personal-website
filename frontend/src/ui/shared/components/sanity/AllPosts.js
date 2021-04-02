@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllPosts } from "../../../../store/posts";
 import { PostDate } from "./PostDate";
+import { Categories } from "./Categories";
 
 export default function AllPosts() {
     //useState for search query in filter bar
@@ -10,7 +11,11 @@ export default function AllPosts() {
 
     //get posts from Redux store state
     const statePosts = useSelector(state => (state.posts ? state.posts : []));
-    const filteredPosts = statePosts.filter(post => post.title.includes(searchQuery));
+    const filteredPosts = statePosts
+        .filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase())
+            || post.categories.forEach(category => category.title.toLowerCase().includes(searchQuery.toLowerCase())));
+
+
     // handle change event for search form
     const handleChange = event => {
         setSearchQuery(event.target.value);
@@ -36,12 +41,13 @@ export default function AllPosts() {
                 filteredPosts.map((post, index) => (
                     <Link to={"/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
-                <img src={post.mainImage.asset.url} className={"min-w-sm h-64 w-64 object-cover pt-10 rounded-l"}
+                <img src={post.mainImage.asset.url} className={"min-w-full object-cover pt-10 rounded-l"}
                      alt="blog post" />
                 <span>
                   <h2 className="py-3">{post.title}</h2>
                 </span>
-                  <PostDate date={post._createdAt}/>
+                  <Categories isPreview={true} categories={post.categories} />
+                  <PostDate date={post._createdAt} />
               </span>
                     </Link>
                 ))}
