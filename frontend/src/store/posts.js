@@ -16,6 +16,7 @@ export const fetchAllPosts = () => dispatch => {
     //fetch data from Sanity IO using GROQ query
     sanityClient.fetch(
         `*[_type == "post"]{
+        categories[]->,
             title,
             _createdAt,
             slug,
