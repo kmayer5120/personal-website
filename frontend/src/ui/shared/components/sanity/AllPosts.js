@@ -36,12 +36,12 @@ export default function AllPosts() {
                 <input type="search" id="filter-text" onChange={handleChange} placeholder="Start typing to filter posts"
                        className="form-input text-gray-700 ring-2 ring-indigo-500" />
             </div>
-            <div className="md:grid md:grid-cols-3 xs:grid xs:grid-cols-2 grid-auto-rows gap-3">
+            <div className="md:grid md:grid-cols-3 xs:grid xs:grid-cols-2 grid-auto-rows gap-10">
                 {filteredPosts &&
                 filteredPosts.map((post, index) => (
                     <Link to={"/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
-                <img src={post.mainImage.asset.url} className={"min-w-full object-cover pt-10 rounded-l"}
+                <img src={post.mainImage.asset.url} className={"min-w-full object-cover w-64 h-64 pt-10 rounded-l"}
                      alt="blog post" />
                 <span>
                   <h2 className="py-3">{post.title}</h2>
