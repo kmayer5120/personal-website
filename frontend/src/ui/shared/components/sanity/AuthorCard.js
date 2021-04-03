@@ -1,5 +1,5 @@
 import React from "react";
-import { PostDate } from "./PostDate";
+import { Date } from "./Date";
 import imageUrlBuilder from "@sanity/image-url";
 import sanityClient from "../../../../client";
 const builder = imageUrlBuilder(sanityClient);
@@ -19,7 +19,7 @@ export const AuthorCard = ({ name, image, createdAt, bio }) => {
             <div className="flex flex-col justify-center align-items ml-5">
                 <h4 className="text-xl">Author: {name}</h4>
                 {bio.children[0].text}
-                <PostDate date={createdAt} />
+                <Date date={createdAt} />
             </div>
             <div>
             </div>

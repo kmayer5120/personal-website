@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllPosts } from "../../../../store/posts";
-import { PostDate } from "./PostDate";
+import { Date } from "./Date";
 import { Categories } from "./Categories";
 
 export default function AllPosts() {
@@ -40,15 +40,16 @@ export default function AllPosts() {
                 {filteredPosts &&
                 filteredPosts.map((post, index) => (
                     <Link to={"/" + post.slug.current} key={post.slug.current}>
-              <span key={index}>
-                <img src={post.mainImage.asset.url} className={"min-w-full object-cover w-64 h-64 pt-10 rounded-l"}
-                     alt="blog post" />
-                <span>
-                  <h2 className="py-3">{post.title}</h2>
-                </span>
-                  <PostDate date={post.publishedAt} />
-                  <Categories isPreview={true} categories={post.categories} />
-              </span>
+                        <span key={index}>
+                        <img src={post.mainImage.asset.url}
+                             className={"min-w-full object-cover w-64 h-64 pt-10 rounded-l"}
+                             alt="blog post" />
+                        <span>
+                            <h2 className="py-3">{post.title}</h2>
+                        </span>
+                            <Date date={post.publishedAt} />
+                            <Categories isPreview={true} categories={post.categories} />
+                        </span>
                     </Link>
                 ))}
             </div>

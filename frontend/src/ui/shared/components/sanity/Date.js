@@ -1,7 +1,7 @@
 import React from "react";
 import { dateFormatter } from "../../../utils/dateFormatter";
 
-export const PostDate = ({date}) => {
+export const Date = ({date}) => {
     const { month, day, year} = dateFormatter(date);
 
     return (

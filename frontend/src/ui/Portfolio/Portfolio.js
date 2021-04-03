@@ -1,10 +1,58 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchAllProjects } from "../../store/projects";
+import { Date } from "../shared/components/sanity/Date";
+import { Categories } from "../shared/components/sanity/Categories";
+
+export function Portfolio() {
+    //useState for search query in filter bar
+    const [searchQuery, setSearchQuery] = useState("");
+
+    //get projects from Redux store state
+    const projects = useSelector(state => (state.projects ? state.projects : []));
+    const filteredProjects = projects
+        .filter(projects => projects.title.toLowerCase().includes(searchQuery.toLowerCase())
+            || projects.projectCategories.forEach(category => category.title.toLowerCase().includes(searchQuery.toLowerCase())));
 
 
-export const Portfolio = () => {
+    // handle change event for search form
+    const handleChange = event => {
+        setSearchQuery(event.target.value);
+    };
+
+    const dispatch = useDispatch();
+
+    const initialEffects = () => {
+        dispatch(fetchAllProjects());
+    };
+
+    useEffect(initialEffects, [dispatch]);
+
     return (
-        <div className="flex justify-center align-items my-10">
-            <h1 className="text-6xl text-white">Portfolio</h1>
+        <div className="min-h-screen flex flex-col items-center justify-top">
+            <h2 className="text-3xl py-5 text-white">Portfolio</h2>
+            <div>
+                <input type="search" id="filter-text" onChange={handleChange}
+                       placeholder="Start typing to filter projects"
+                       className="form-input text-gray-700 ring-2 ring-indigo-500" />
+            </div>
+            <div className="md:grid grid-cols-1 grid-auto-rows gap-10">
+                {filteredProjects &&
+                filteredProjects.map((project, index) => (
+                    <Link to={`/portfolio/${project.slug.current}`} key={project.slug.current}>
+                        <span key={index}>
+                        <span>
+                          <h2 className="py-3 text-4xl text-white">{project.title}</h2>
+                        </span>
+                            <img src={project.mainImage.asset.url} className={"min-w-full object-cover pt-10 rounded-l"}
+                                 alt="project screenshot" />
+                            <Date date={project.publishedAt} />
+                            <Categories isPreview={true} categories={project.projectCategories} />
+                        </span>
+                    </Link>
+                ))}
+            </div>
         </div>
-    )
+    );
 }
