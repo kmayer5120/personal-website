@@ -46,8 +46,8 @@ export default function AllPosts() {
                 <span>
                   <h2 className="py-3">{post.title}</h2>
                 </span>
+                  <PostDate date={post.publishedAt} />
                   <Categories isPreview={true} categories={post.categories} />
-                  <PostDate date={post._createdAt} />
               </span>
                     </Link>
                 ))}

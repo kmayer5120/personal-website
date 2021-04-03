@@ -22,7 +22,7 @@ export default function Post() {
             .fetch(
                 `*[slug.current == $slug]{
           title,
-          _createdAt,
+          publishedAt,
           slug,
           mainImage{
             asset->{
@@ -50,7 +50,7 @@ export default function Post() {
                 <div className="md:flex md:flex-row xs:flex-col items-center align-items gap-1">
                     <AuthorCard
                         name={post.name}
-                        createdAt={post._createdAt}
+                        createdAt={post.publishedAt}
                         image={post.authorImage}
                         bio={post.bio} />
                     <Categories categories={post.categories} />

@@ -15,10 +15,10 @@ export const slice = createSlice({
 export const fetchAllPosts = () => dispatch => {
     //fetch data from Sanity IO using GROQ query
     sanityClient.fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"] | order(publishedAt desc){
         categories[]->,
             title,
-            _createdAt,
+            publishedAt,
             slug,
             mainImage{
               asset->{
