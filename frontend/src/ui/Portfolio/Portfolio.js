@@ -25,8 +25,6 @@ export function Portfolio() {
         dispatch(fetchAllProjects());
     };
 
-    console.log(projects);
-
     useEffect(initialEffects, [dispatch]);
 
     return (
