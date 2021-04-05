@@ -18,8 +18,11 @@ export const fetchAllProjects = () => dispatch => {
         `*[_type == "project"] | order(publishedAt desc){
         projectCategories[]->,
             title,
+            linkToGitHub,
+            linkToDeployment,
             publishedAt,
             slug,
+            body,
             mainImage{
               asset->{
               _id,
