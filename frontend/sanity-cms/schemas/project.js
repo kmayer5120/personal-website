@@ -9,6 +9,16 @@ export default {
             type: "string",
         },
         {
+            name: "linkToDeployment",
+            title: "Link to Deployment",
+            type: "string",
+        },
+        {
+            name: "linkToGitHub",
+            title: "Link to GitHub Repo",
+            type: "string",
+        },
+        {
             name: "slug",
             title: "Slug",
             type: "slug",
