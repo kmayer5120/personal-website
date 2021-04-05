@@ -19,7 +19,7 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className='flex align-items justify-center py-10'>
-                        <Link to='/blog' className='btn btn-primary text-3xl'>
+                        <Link to='/blog' className='btn btn-primary text-xl'>
                             Go To Blog
                         </Link>
                     </div>
