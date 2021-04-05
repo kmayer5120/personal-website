@@ -89,6 +89,9 @@ code {
         @apply bg-gray-700 text-white hover:bg-gray-400 transition
     }
 
+    .btn-yellow {
+        @apply bg-yellow-500 text-white hover:bg-yellow-400 transition
+    }
     .nav-links {
         @apply pl-2 py-2 flex items-center text-3xl uppercase font-bold leading-snug text-white hover:opacity-75
     }
