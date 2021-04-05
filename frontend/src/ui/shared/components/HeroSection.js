@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../animations/fadeIn';
+import { Link } from "react-router-dom";
 
 
 export const HeroSection = () => {
@@ -31,6 +32,7 @@ export const HeroSection = () => {
                         <a href='#about' className='btn btn-primary shadow-lg'>About Kyle</a>
                         <a href='https://www.dropbox.com/s/tphpwff3vc7ggtg/kyle-mayer-resume-2021.pdf?dl=0'
                            target='_blank' rel='noreferrer' className='btn btn-secondary'>Get Resume</a>
+                        <Link to="/portfolio" className="btn btn-primary">Portfolio</Link>
                     </div>
                 </div>
             </section>
