@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllProjects } from "../../store/projects";
-import { Date } from "../shared/components/sanity/Date";
-import { Categories } from "../shared/components/sanity/Categories";
+import { Project } from "../shared/components/Project";
 
 export function Portfolio() {
     //useState for search query in filter bar
@@ -27,6 +25,8 @@ export function Portfolio() {
         dispatch(fetchAllProjects());
     };
 
+    console.log(projects);
+
     useEffect(initialEffects, [dispatch]);
 
     return (
@@ -35,22 +35,12 @@ export function Portfolio() {
             <div>
                 <input type="search" id="filter-text" onChange={handleChange}
                        placeholder="Start typing to filter projects"
-                       className="form-input text-gray-700 ring-2 ring-indigo-500" />
+                       className="form-input text-gray-700 ring-2 ring-indigo-500 mb-10" />
             </div>
-            <div className="md:grid grid-cols-1 grid-auto-rows gap-10">
+            <div className="md:grid grid-cols-1 grid-auto-rows gap-5">
                 {filteredProjects &&
                 filteredProjects.map((project, index) => (
-                    <Link to={`/portfolio/${project.slug.current}`} key={project.slug.current}>
-                        <span key={index}>
-                        <span>
-                          <h2 className="py-3 text-4xl text-white">{project.title}</h2>
-                        </span>
-                            <img src={project.mainImage.asset.url} className={"min-w-full object-cover pt-10 rounded-l"}
-                                 alt="project screenshot" />
-                            <Date date={project.publishedAt} />
-                            <Categories isPreview={true} categories={project.projectCategories} />
-                        </span>
-                    </Link>
+                    <Project key={index} project={project} />
                 ))}
             </div>
         </div>
