@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    @apply py-3 px-4 mb-3 focus:outline-none focus:shadow-2xl bg-indigo-500 text-white hover:bg-indigo-400 transition ease-in-out duration-500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+
+
+/* Style the accordion content title */
+.accordion-title {
+    @apply text-2xl;
+}
+
+/* Style the accordion chevron icon */
+.accordion-icon {
+    @apply fill-current;
+    margin-left: auto;
+    transition: transform 0.45s ease-in;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+    transform: rotate(450deg);
+}
+
+.rotate-reset {
+    transform: rotate(-360deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion-content {
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
