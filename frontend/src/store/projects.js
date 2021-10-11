@@ -1,21 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import sanityClient from "../client";
 
-
 export const slice = createSlice({
-    name: "projects",
-    initialState: [],
-    reducers: {
-        getAllProjects: (projects, action) => {
-            return action.payload;
-        },
+  name: "projects",
+  initialState: [],
+  reducers: {
+    getAllProjects: (projects, action) => {
+      return action.payload;
     },
+  },
 });
 
-export const fetchAllProjects = () => dispatch => {
-    //fetch data from Sanity IO using GROQ query
-    sanityClient.fetch(
-        `*[_type == "project"] | order(publishedAt desc){
+export const fetchAllProjects = () => (dispatch) => {
+  //fetch data from Sanity IO using GROQ query
+  sanityClient
+    .fetch(
+      `*[_type == "project"] | order(publishedAt desc){
         projectCategories[]->,
             title,
             linkToGitHub,
@@ -29,11 +29,12 @@ export const fetchAllProjects = () => dispatch => {
               url
             },
           }
-        }`)
-        .then(data => dispatch(getAllProjects(data)))
-        .catch(error => console.error(error));
+        }`
+    )
+    .then((data) => dispatch(getAllProjects(data)))
+    .catch((error) => console.error(error));
 };
 
-export const { getAllProjects, } = slice.actions;
+export const { getAllProjects } = slice.actions;
 
 export default slice.reducer;

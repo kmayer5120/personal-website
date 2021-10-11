@@ -3,8 +3,8 @@ import posts from "./posts";
 import projects from "./projects";
 
 const reducer = combineReducers({
-    posts,
-    projects,
-})
+  posts,
+  projects,
+});
 
-export const store = configureStore({reducer});
+export const store = configureStore({ reducer });

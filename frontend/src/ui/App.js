@@ -9,22 +9,22 @@ import { Provider } from "react-redux";
 import { Portfolio } from "./Portfolio/Portfolio";
 
 function App(store) {
-    return (
-        <>
-            <Provider store={store}>
-                <BrowserRouter>
-                    <Navbar className="fixed" />
-                    <Switch>
-                        <Route path="/portfolio" component={Portfolio} />
-                        <Route path="/blog" component={Blog} />
-                        <Route path="/:slug" component={Post} />
-                        <Route exact path="/" component={Home} />
-                        <Route component={FourOhFour} />
-                    </Switch>
-                </BrowserRouter>
-            </Provider>
-        </>
-    );
+  return (
+    <>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Navbar className="fixed" />
+          <Switch>
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/:slug" component={Post} />
+            <Route exact path="/" component={Home} />
+            <Route component={FourOhFour} />
+          </Switch>
+        </BrowserRouter>
+      </Provider>
+    </>
+  );
 }
 
 export default App;
