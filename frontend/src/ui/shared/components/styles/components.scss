@@ -10,31 +10,27 @@
   align-items: center;
   border: none;
   outline: none;
+
+  &-title {
+    @apply text-2xl;
+  }
+
+  &-icon {
+    @apply fill-current;
+    margin-left: auto;
+    transition: transform 0.45s ease-in;
+  }
+
+  &-content {
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+  }
 }
 
-/* Style the accordion content title */
-.accordion-title {
-  @apply text-2xl;
-}
-
-/* Style the accordion chevron icon */
-.accordion-icon {
-  @apply fill-current;
-  margin-left: auto;
-  transition: transform 0.45s ease-in;
-}
-
-/* Style to rotate icon when state is active */
 .rotate {
   transform: rotate(450deg);
 }
 
 .rotate-reset {
   transform: rotate(-360deg);
-}
-
-/* Style the accordion content panel. Note: hidden by default */
-.accordion-content {
-  overflow: hidden;
-  transition: max-height 0.6s ease;
 }

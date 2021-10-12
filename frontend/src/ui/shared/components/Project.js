@@ -4,7 +4,7 @@ import { Categories } from "./sanity/Categories";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import { Accordion } from "./Accordion";
-import "./css/components.css";
+import "./styles/components.scss";
 import { FaGithub, FaLink } from "react-icons/fa";
 
 export const Project = ({ project }) => {

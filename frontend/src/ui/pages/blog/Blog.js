@@ -1,5 +1,5 @@
 import React from "react";
-import AllPosts from "../shared/components/sanity/AllPosts";
+import AllPosts from "../../shared/components/sanity/AllPosts";
 
 export const Blog = () => {
   return (

@@ -1,12 +1,12 @@
 import { Navbar } from "./shared/components/Navbar";
-import { Home } from "./home/Home";
-import { FourOhFour } from "./FourOhFour";
+import { Home } from "./pages/home/Home";
+import { Blog } from "./pages/blog/Blog";
+import { Portfolio } from "./pages/portfolio/Portfolio";
+import { FourOhFour } from "./pages/FourOhFour";
 import { BrowserRouter } from "react-router-dom";
 import { Switch, Route } from "react-router";
-import { Blog } from "./blog/Blog";
 import Post from "./shared/components/sanity/Post";
 import { Provider } from "react-redux";
-import { Portfolio } from "./Portfolio/Portfolio";
 
 function App(store) {
   return (

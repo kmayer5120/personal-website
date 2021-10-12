@@ -10,7 +10,7 @@ import {
   FaNode,
   FaBootstrap,
 } from "react-icons/all";
-import "../../../index.css";
+import "../../../index.scss";
 import { Header } from "./Header";
 import ddcLogo from "../../img/ddc.png";
 

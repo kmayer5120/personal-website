@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, GiPapers } from "react-icons/all";
-import "../../../index.css";
+import "../../../index.scss";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {

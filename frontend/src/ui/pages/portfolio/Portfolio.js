@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchAllProjects } from "../../store/projects";
-import { Project } from "../shared/components/Project";
+import { fetchAllProjects } from "../../../store/projects";
+import { Project } from "../../shared/components/Project";
 
 export function Portfolio() {
   //useState for search query in filter bar

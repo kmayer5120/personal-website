@@ -1,7 +1,7 @@
 import React from "react";
-import { Technologies } from "../shared/components/Technologies";
-import { AboutMe } from "../shared/components/AboutMe";
-import { HeroSection } from "../shared/components/HeroSection";
+import { Technologies } from "../../shared/components/Technologies";
+import { AboutMe } from "../../shared/components/AboutMe";
+import { HeroSection } from "../../shared/components/HeroSection";
 import { Link } from "react-router-dom";
 
 export const Home = () => {

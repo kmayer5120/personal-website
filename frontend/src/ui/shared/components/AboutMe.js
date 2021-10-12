@@ -1,9 +1,8 @@
 import React from "react";
 import { Header } from "./Header";
-import "../../../index.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profilePicture from "../../img/kyle-mayer-profile-picture.jpg";
-import "../../../index.css";
+import "../../../index.scss";
 
 export const AboutMe = () => {
   return (

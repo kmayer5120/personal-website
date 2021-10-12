@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "../components/css/components.css";
+import "../components/styles/components.scss";
 
 export const Accordion = ({ children }) => {
   const [active, setActive] = useState("");
