@@ -43,10 +43,10 @@ export const CurrentWork = () => (
             <p className="text-indigo-200 text-center text-6xl font-bold">
               ...
             </p>
-            <p className="text-2xl font-bold text-indigo-100 mt-10">
+            <p className="text-xl font-bold text-indigo-100 mt-10">
               Some of the technologies I use in daily work:
             </p>
-            <ul className="max-w-prose text-indigo-100 text-2xl mt-5 pb-5">
+            <ul className="max-w-prose text-indigo-100 text-xl mt-5 pb-5">
               <li className="ml-5">Gatsby</li>
               <li className="ml-5">React</li>
               <li className="ml-5">Redux</li>
