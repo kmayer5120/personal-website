@@ -16,7 +16,7 @@ export const CurrentWork = () => (
             className="rounded max-w-xs mx-auto shadow-md bg-white p-3 mt-5"
           />
           <div className="px-20 flex-row mt-10">
-            <p className="max-w-prose text-white md:text-xl text-lg">
+            <p className="max-w-prose text-indigo-100 text-lg pt-3">
               I am currently working as an associate consultant for{" "}
               <a
                 href="https://www.ruralsourcing.com"
@@ -30,7 +30,8 @@ export const CurrentWork = () => (
               My work consists of integrating with client teams to build
               websites.
             </p>
-            <p className="max-w-prose text-white md:text-xl text-lg pt-3">
+
+            <p className="max-w-prose text-indigo-100 text-lg pt-3">
               I love working for RSI because I get the chance to constantly
               learn new things. The company culture is incredible and
               supportive! So far I've had the chance to work with a great
