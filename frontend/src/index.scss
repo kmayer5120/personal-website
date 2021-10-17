@@ -20,6 +20,7 @@ html {
   font-size: 1rem;
   min-height: 100vh;
   @apply bg-gray-800;
+  scroll-behavior: smooth !important;
 }
 
 code {
@@ -34,10 +35,9 @@ code {
 }
 
 .glass-blur {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(133, 137, 194, 0.3);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -67,6 +67,10 @@ code {
 #img-about-me {
   filter: grayscale(0.7);
   -webkit-filter: grayscale(0.7);
+  max-width: 12rem;
+}
+
+#img-rsi-logo {
   max-width: 12rem;
 }
 

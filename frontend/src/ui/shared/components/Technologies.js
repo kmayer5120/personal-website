@@ -19,7 +19,7 @@ export const Technologies = () => {
     <>
       <div className="container glass-blur rounded-xl shadow-md mt-10 md:mx-5 md:max-w-md">
         <Header label="Technologies" />
-        <div className="ml-2 border-l-8 rounded border-indigo-500">
+        <div className="rounded">
           <div className="grid my-5 px-20 grid-flow-cols grid-flow-rows grid-cols-3 grid-rows-3 gap-16">
             <SiJavascript className="technology-icons" />
             <FaReact className="technology-icons" />

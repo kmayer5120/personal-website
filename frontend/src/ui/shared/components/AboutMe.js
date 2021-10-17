@@ -9,7 +9,7 @@ export const AboutMe = () => {
     <>
       <div className="container glass-blur rounded-xl shadow-md mt-10 md:mx-5 md:max-w-md">
         <Header label="Bio" />
-        <div className="ml-2 my-5 border-l-8 rounded border-yellow-500">
+        <div className="ml-2 my-5 card__body rounded border-yellow-500">
           <div className="md:grid grid-cols-1 align-items justify-items-center">
             <img
               src={profilePicture}
