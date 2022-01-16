@@ -4,6 +4,8 @@ import { fadeIn } from "../../animations/fadeIn";
 import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
+  const resumeURL = "https://www.dropbox.com/s/w3yuqe5tk9z05ym/kyle-mayer-resume-2022.pdf?dl=0";
+
   return (
     <>
       <section className="hero-image min-h-screen">
@@ -44,7 +46,7 @@ export const HeroSection = () => {
               About Kyle
             </a>
             <a
-              href="https://www.dropbox.com/s/tphpwff3vc7ggtg/kyle-mayer-resume-2021.pdf?dl=0"
+              href={resumeURL}
               target="_blank"
               rel="noreferrer"
               className="btn btn-secondary"

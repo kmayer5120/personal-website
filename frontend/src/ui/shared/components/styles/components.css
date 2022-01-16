@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  @apply py-3 px-4 mb-3 focus:outline-none focus:shadow-2xl bg-indigo-500 text-white hover:bg-indigo-400 transition ease-in-out duration-500;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  outline: none;
+}
+
+.accordion-title {
+  @apply text-2xl;
+}
+
+.accordion-icon {
+  @apply fill-current;
+  margin-left: auto;
+  -webkit-transition: -webkit-transform 0.45s ease-in;
+  transition: -webkit-transform 0.45s ease-in;
+  transition: transform 0.45s ease-in;
+  transition: transform 0.45s ease-in, -webkit-transform 0.45s ease-in;
+}
+
+.accordion-content {
+  overflow: hidden;
+  -webkit-transition: max-height 0.6s ease;
+  transition: max-height 0.6s ease;
+}
+
+.rotate {
+  -webkit-transform: rotate(450deg);
+          transform: rotate(450deg);
+}
+
+.rotate-reset {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+/*# sourceMappingURL=components.css.map */
